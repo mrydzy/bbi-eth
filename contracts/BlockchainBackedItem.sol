@@ -14,7 +14,7 @@ contract BlockchainBackedItem is ERC721URIStorage, Ownable {
     mapping(uint256 => bool) public isLostOrStolen;
     mapping(uint256 => string) public ownerInfo;
 
-    constructor() public ERC721("PixelJewellery", "BBI") {}
+    constructor() ERC721("PixelJewellery", "BBI") {}
 
     function mintBBI(address recipient, string memory tokenURI)
         public onlyOwner
